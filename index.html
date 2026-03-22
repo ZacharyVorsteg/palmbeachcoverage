@@ -3,29 +3,1139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palm Beach Coverage — Coming Soon</title>
+    <title>Palm Beach Coverage | Property & Casualty Insurance | Palm Beach County, FL</title>
+    <meta name="description" content="Local property and casualty insurance for Palm Beach County. Homeowners, flood, windstorm, auto, and commercial coverage. Get a free quote from an independent agency that shops 50+ carriers for your best rate.">
+    <meta name="keywords" content="palm beach county insurance, property and casualty insurance florida, homeowners insurance palm beach, flood insurance palm beach county, hurricane insurance florida, windstorm insurance, auto insurance west palm beach, commercial property insurance palm beach">
+    <link rel="canonical" href="https://palmbeachcoverage.com/">
+    <meta property="og:title" content="Palm Beach Coverage | Local P&C Insurance Agency">
+    <meta property="og:description" content="Independent property & casualty insurance for Palm Beach County. We shop 50+ carriers to find your best rate on home, flood, auto, and commercial coverage.">
+    <meta property="og:url" content="https://palmbeachcoverage.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Palm Beach Coverage | Local P&C Insurance Agency">
+    <meta name="twitter:description" content="Independent property & casualty insurance for Palm Beach County. We shop 50+ carriers for your best rate.">
+    <meta name="geo.region" content="US-FL">
+    <meta name="geo.placename" content="Palm Beach County">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
     <style>
+        :root {
+            --navy: #0B2545;
+            --navy-light: #13315C;
+            --gold: #C5A255;
+            --gold-light: #D4B76A;
+            --coral: #E86C52;
+            --coral-hover: #D45A40;
+            --teal: #2A9D8F;
+            --white: #FFFFFF;
+            --off-white: #F7F9FC;
+            --gray-50: #F0F3F8;
+            --gray-100: #E1E6EF;
+            --gray-200: #C8D0DD;
+            --gray-600: #5A6578;
+            --gray-700: #3D4756;
+            --gray-900: #1A2332;
+            --shadow-sm: 0 1px 3px rgba(11,37,69,0.08);
+            --shadow-md: 0 4px 12px rgba(11,37,69,0.12);
+            --shadow-lg: 0 8px 30px rgba(11,37,69,0.16);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0f1d2f;
-            color: #fff;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--gray-900);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11,37,69,0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197,162,85,0.15);
+            padding: 0 1.5rem;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-logo span { color: var(--gold); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--coral) !important;
+            color: var(--white) !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius);
+            font-weight: 600 !important;
+            transition: background 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--coral-hover) !important; }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(165deg, var(--navy) 0%, var(--navy-light) 60%, #1B4070 100%);
+            color: var(--white);
+            padding: 8rem 1.5rem 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(ellipse at 70% 40%, rgba(197,162,85,0.08) 0%, transparent 70%);
+        }
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(197,162,85,0.15);
+            border: 1px solid rgba(197,162,85,0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--gold-light);
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.15;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--gold);
+        }
+        .hero-sub {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        .hero-stat strong {
+            display: block;
+            font-size: 1.75rem;
+            color: var(--gold);
+        }
+        .hero-stat span {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* HERO FORM */
+        .hero-form-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            color: var(--gray-900);
+        }
+        .hero-form-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.35rem;
+            color: var(--navy);
+        }
+        .hero-form-card .form-sub {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 0.35rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.7rem 0.9rem;
+            border: 1.5px solid var(--gray-200);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+            background: var(--white);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--navy);
+            box-shadow: 0 0 0 3px rgba(11,37,69,0.08);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 0.85rem 1.5rem;
+            background: var(--coral);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            font-family: inherit;
+        }
+        .btn-primary:hover {
+            background: var(--coral-hover);
+            transform: translateY(-1px);
+        }
+        .form-disclaimer {
+            font-size: 0.78rem;
+            color: var(--gray-600);
+            margin-top: 0.75rem;
+            text-align: center;
+        }
+
+        /* SECTION DEFAULTS */
+        section {
+            padding: 5rem 1.5rem;
+        }
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--coral);
+            margin-bottom: 0.75rem;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 640px;
+            line-height: 1.7;
+        }
+
+        /* PAIN POINTS */
+        .pain-section {
+            background: var(--off-white);
+        }
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .pain-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-100);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .pain-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .pain-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(11,37,69,0.06);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 2rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        h1 span { color: #c5a255; }
-        p { opacity: 0.6; font-size: 1.1rem; }
+        .pain-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        .pain-card p {
+            font-size: 0.92rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* COVERAGE TYPES */
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .coverage-card {
+            background: var(--white);
+            border: 2px solid var(--gray-100);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .coverage-card:hover {
+            border-color: var(--gold);
+            box-shadow: var(--shadow-md);
+        }
+        .coverage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .coverage-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        .coverage-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* WHY US */
+        .why-section {
+            background: var(--navy);
+            color: var(--white);
+        }
+        .why-section .section-label { color: var(--gold); }
+        .why-section .section-title { color: var(--white); }
+        .why-section .section-desc { color: rgba(255,255,255,0.7); }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .why-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .why-icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            background: rgba(197,162,85,0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        .why-item h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+        .why-item p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.6;
+        }
+
+        /* AREAS */
+        .areas-strip {
+            background: var(--off-white);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+        .areas-strip h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .area-tag {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .faq-q {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.25rem 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+        .faq-q::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--gray-600);
+            transition: transform 0.2s;
+        }
+        .faq-q[aria-expanded="true"]::after {
+            content: '\2212';
+        }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-a-inner {
+            padding: 0 0 1.25rem;
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* BOTTOM CTA */
+        .bottom-cta {
+            background: linear-gradient(165deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 1.5rem;
+        }
+        .bottom-cta h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .bottom-cta p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 560px;
+            margin: 0 auto 2rem;
+        }
+        .bottom-form {
+            max-width: 480px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.75rem;
+        }
+        .bottom-form input {
+            flex: 1;
+            padding: 0.85rem 1rem;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius);
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .bottom-form input::placeholder {
+            color: rgba(255,255,255,0.45);
+        }
+        .bottom-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        .bottom-form .btn-primary {
+            width: auto;
+            white-space: nowrap;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--gray-900);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 1.5rem 2rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+        }
+        .footer-brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+        .footer-brand span { color: var(--gold); }
+        footer p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        .footer-col h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.88rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+        .footer-bottom a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        .footer-bottom a:hover { color: var(--gold); }
+
+        /* SUCCESS STATE */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .form-success.show { display: block; }
+        .form-success .check {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .form-success h3 {
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        .form-success p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .hero { padding: 7rem 1.5rem 3rem; }
+            .hero h1 { font-size: 2.25rem; }
+            .pain-grid { grid-template-columns: 1fr; }
+            .coverage-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                padding: 1.5rem;
+                gap: 1rem;
+                border-bottom: 1px solid rgba(197,162,85,0.15);
+            }
+            .bottom-form {
+                flex-direction: column;
+            }
+            .hero-stats { gap: 1.5rem; }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.85rem; }
+            .section-title { font-size: 1.75rem; }
+            .coverage-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
     </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "InsuranceAgency",
+        "name": "Palm Beach Coverage",
+        "description": "Independent property and casualty insurance agency serving Palm Beach County, Florida. Homeowners, flood, windstorm, auto, and commercial coverage.",
+        "url": "https://palmbeachcoverage.com",
+        "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Palm Beach County, Florida"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "West Palm Beach",
+            "addressRegion": "FL",
+            "addressCountry": "US"
+        },
+        "serviceType": [
+            "Homeowners Insurance",
+            "Flood Insurance",
+            "Windstorm Insurance",
+            "Auto Insurance",
+            "Commercial Property Insurance",
+            "Umbrella Insurance"
+        ],
+        "knowsAbout": [
+            "Florida property insurance",
+            "Hurricane insurance coverage",
+            "NFIP flood insurance",
+            "Citizens Property Insurance alternatives",
+            "Palm Beach County real estate risk"
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do I need separate flood insurance in Palm Beach County?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Standard homeowners insurance does not cover flood damage. In Palm Beach County, many properties fall within FEMA flood zones, making flood insurance essential. Both NFIP (National Flood Insurance Program) and private flood policies are available, and an independent agent can help you compare options."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if my roof is older than 20 years?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many Florida insurers limit coverage or increase premiums for homes with roofs older than 15-20 years. Some require a roof inspection or certification. An independent agent can find carriers that work with older roofs and help you explore options like roof certification programs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Citizens Property Insurance my only option in Florida?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Citizens is Florida's insurer of last resort, meaning it should only be used when private market options are unavailable. An independent agent can access 50+ carriers to find private market alternatives that often provide better coverage at competitive rates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much can I save by bundling home and auto insurance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bundling home and auto insurance with the same carrier typically saves 15-25% on premiums. In Florida's high-rate market, this can mean significant annual savings. An independent agent can identify the best bundle combinations across multiple carriers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is windstorm insurance and do I need it in Palm Beach County?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Windstorm insurance covers damage from hurricanes, tropical storms, and high winds. In coastal Palm Beach County, windstorm coverage is essential and sometimes required by mortgage lenders. Some homeowners policies include it, while others require a separate windstorm policy."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
-    <div>
-        <h1>Palm Beach <span>Coverage</span></h1>
-        <p>Coming soon.</p>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">Palm Beach <span>Coverage</span></a>
+        <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="#coverage">Coverage</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#quote" class="nav-cta">Get a Free Quote</a></li>
+        </ul>
     </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="quote">
+    <div class="hero-inner">
+        <div>
+            <div class="hero-badge">Independent Agency &middot; Palm Beach County</div>
+            <h1>Property & Casualty Insurance <em>That Actually Protects You</em></h1>
+            <p class="hero-sub">Florida rates are climbing. Carriers are leaving the state. We shop 50+ insurers to find coverage that fits your property, your risk, and your budget &mdash; right here in Palm Beach County.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong>50+</strong>
+                    <span>Insurance Carriers</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>6</strong>
+                    <span>Coverage Lines</span>
+                </div>
+                <div class="hero-stat">
+                    <strong>100%</strong>
+                    <span>Local to PBC</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="hero-form-card" id="quote-form-card">
+                <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="quoteForm">
+                    <input type="hidden" name="form-name" value="quote">
+                    <p style="display:none"><input name="bot-field"></p>
+                    <h3>Get Your Free Quote</h3>
+                    <p class="form-sub">No commitment. Takes 2 minutes.</p>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="first_name" required placeholder="First name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="last_name" required placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(561) 555-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Palm Beach County Zip Code</label>
+                        <input type="text" id="zip" name="zip_code" placeholder="33401" pattern="[0-9]{5}" maxlength="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="coverage">Coverage Needed</label>
+                        <select id="coverage" name="coverage_type">
+                            <option value="">Select coverage type</option>
+                            <option value="homeowners">Homeowners</option>
+                            <option value="flood">Flood</option>
+                            <option value="windstorm">Windstorm / Hurricane</option>
+                            <option value="auto">Auto</option>
+                            <option value="commercial">Commercial Property</option>
+                            <option value="bundle">Bundle (Home + Auto)</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Get My Free Quote &rarr;</button>
+                    <p class="form-disclaimer">Quotes are estimates. Actual rates depend on underwriting and carrier approval. We never spam or share your info.</p>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="check">&#10003;</div>
+                    <h3>We Got Your Request</h3>
+                    <p>A Palm Beach Coverage advisor will reach out within 24 hours with your personalized quote options.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="pain-section" id="problems">
+    <div class="section-inner">
+        <span class="section-label">The Florida Insurance Problem</span>
+        <h2 class="section-title">Palm Beach County Homeowners Are Getting Squeezed</h2>
+        <p class="section-desc">Florida's insurance market is in crisis. Rates are up, carriers are pulling out, and most homeowners don't know their options. Here's what we see every day.</p>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <div class="pain-icon">&#127786;</div>
+                <h3>Hurricane Season Gets More Expensive Every Year</h3>
+                <p>Windstorm premiums in coastal Palm Beach County have surged. Separate hurricane deductibles (5-10% of home value) catch homeowners off guard when they file a claim.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#127754;</div>
+                <h3>Flood Isn't Covered by Homeowners Insurance</h3>
+                <p>80% of homeowners think standard insurance covers flooding. It doesn't. With Palm Beach County's flood zones and rising NFIP rates, a gap in coverage can be devastating.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#127968;</div>
+                <h3>Older Roofs Are Getting Denied Coverage</h3>
+                <p>If your roof is 15+ years old, many Florida carriers won't write a policy. Some require expensive inspections. We work with carriers that cover older roofs without the runaround.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#128200;</div>
+                <h3>Rates Up 50%+ Since 2020</h3>
+                <p>Florida has seen the steepest insurance rate increases in the nation. Many homeowners are paying double what they paid five years ago for the same coverage.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#128682;</div>
+                <h3>Carriers Are Leaving Florida</h3>
+                <p>Over a dozen insurers have exited the Florida market since 2020. If your carrier leaves, you could end up in the Citizens pool at higher rates with less coverage.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">&#129300;</div>
+                <h3>Citizens Is Not the Answer</h3>
+                <p>Citizens Property Insurance is Florida's insurer of last resort &mdash; not your best option. Rates are often 25-40% higher than the private market, and coverage can be limited.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COVERAGE TYPES -->
+<section id="coverage">
+    <div class="section-inner">
+        <span class="section-label">What We Cover</span>
+        <h2 class="section-title">Coverage for Every Risk in Palm Beach County</h2>
+        <p class="section-desc">From waterfront estates in Jupiter to condos in Boca Raton, we match the right coverage to your specific property and situation.</p>
+        <div class="coverage-grid">
+            <div class="coverage-card">
+                <div class="coverage-icon">&#127968;</div>
+                <h3>Homeowners Insurance</h3>
+                <p>Dwelling, personal property, liability, and loss of use. We find the right carrier for your home's age, roof condition, and location.</p>
+            </div>
+            <div class="coverage-card">
+                <div class="coverage-icon">&#127754;</div>
+                <h3>Flood Insurance</h3>
+                <p>NFIP and private flood options. Whether you're in a high-risk zone or not, flood coverage protects what homeowners insurance won't.</p>
+            </div>
+            <div class="coverage-card">
+                <div class="coverage-icon">&#127786;</div>
+                <h3>Windstorm &amp; Hurricane</h3>
+                <p>Dedicated windstorm coverage for coastal properties. We help you understand hurricane deductibles and find the most competitive wind coverage.</p>
+            </div>
+            <div class="coverage-card">
+                <div class="coverage-icon">&#128663;</div>
+                <h3>Auto Insurance</h3>
+                <p>Liability, collision, comprehensive, uninsured motorist, and PIP. Bundle with home for significant savings.</p>
+            </div>
+            <div class="coverage-card">
+                <div class="coverage-icon">&#127970;</div>
+                <h3>Commercial Property</h3>
+                <p>Coverage for offices, warehouses, retail spaces, and mixed-use buildings. General liability, property, and business interruption.</p>
+            </div>
+            <div class="coverage-card">
+                <div class="coverage-icon">&#9730;&#65039;</div>
+                <h3>Umbrella &amp; Excess Liability</h3>
+                <p>Extra liability protection beyond your home and auto limits. Essential for high-value properties and assets in Palm Beach County.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section" id="why">
+    <div class="section-inner">
+        <span class="section-label">Why Palm Beach Coverage</span>
+        <h2 class="section-title">An Independent Agency That Works for You</h2>
+        <p class="section-desc">We're not tied to one carrier. We represent you &mdash; shopping the entire Florida market to find coverage that actually fits.</p>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">&#128269;</div>
+                <div>
+                    <h4>We Shop 50+ Carriers</h4>
+                    <p>Captive agents sell one company's products. We compare rates and coverage across dozens of Florida-admitted carriers to find your best option.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">&#128205;</div>
+                <div>
+                    <h4>Local to Palm Beach County</h4>
+                    <p>We understand PBC flood zones, coastal wind exposure, older construction, and the specific risks of living in South Florida. Generic national agencies don't.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">&#128172;</div>
+                <div>
+                    <h4>Honest Conversations About Risk</h4>
+                    <p>We'll tell you what you actually need &mdash; and what you don't. No upselling. No scare tactics. Just straightforward coverage advice.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">&#128337;</div>
+                <div>
+                    <h4>Fast Quotes, No Runaround</h4>
+                    <p>Get personalized quotes without filling out 20-page applications. We streamline the process so you can make decisions quickly.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">&#128736;</div>
+                <div>
+                    <h4>Claims Advocacy</h4>
+                    <p>When you file a claim, we're in your corner. We help navigate the process, push back on lowball settlements, and make sure you get what you're owed.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">&#128176;</div>
+                <div>
+                    <h4>Annual Rate Reviews</h4>
+                    <p>We don't set it and forget it. Every year before renewal, we re-shop your coverage to make sure you're still getting the best deal available.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<div class="areas-strip">
+    <h3>Serving All of Palm Beach County</h3>
+    <div class="areas-list">
+        <span class="area-tag">West Palm Beach</span>
+        <span class="area-tag">Boca Raton</span>
+        <span class="area-tag">Delray Beach</span>
+        <span class="area-tag">Boynton Beach</span>
+        <span class="area-tag">Jupiter</span>
+        <span class="area-tag">Palm Beach Gardens</span>
+        <span class="area-tag">Wellington</span>
+        <span class="area-tag">Lake Worth</span>
+        <span class="area-tag">Royal Palm Beach</span>
+        <span class="area-tag">Riviera Beach</span>
+        <span class="area-tag">Palm Beach</span>
+        <span class="area-tag">Greenacres</span>
+        <span class="area-tag">Palm Springs</span>
+        <span class="area-tag">Loxahatchee</span>
+        <span class="area-tag">Lantana</span>
+        <span class="area-tag">North Palm Beach</span>
+        <span class="area-tag">Tequesta</span>
+        <span class="area-tag">Juno Beach</span>
+    </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+    <div class="section-inner">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Florida Insurance FAQ</h2>
+        <p class="section-desc">Answers to the questions Palm Beach County homeowners ask most.</p>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need separate flood insurance in Palm Beach County?</button>
+                <div class="faq-a"><div class="faq-a-inner">Yes. Standard homeowners insurance does <strong>not</strong> cover flood damage &mdash; this surprises most homeowners. In Palm Beach County, many properties fall within FEMA-designated flood zones, making separate flood coverage essential. Both NFIP (National Flood Insurance Program) and private flood policies are available. An independent agent can compare both to find the best rate and coverage for your specific property.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What happens if my roof is older than 15 or 20 years?</button>
+                <div class="faq-a"><div class="faq-a-inner">Many Florida insurers limit coverage or significantly increase premiums for homes with roofs older than 15-20 years. Some carriers require a roof inspection or four-point inspection before they'll issue a policy. An independent agent can find carriers that work with older roofs and help you explore options like Florida's roof certification programs, which can extend your eligibility.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is Citizens Property Insurance my only option?</button>
+                <div class="faq-a"><div class="faq-a-inner">No. Citizens is Florida's insurer of last resort &mdash; it's designed as a safety net, not a first choice. Rates are often 25-40% higher than private market alternatives, and coverage can be more limited. An independent agency can search across 50+ carriers to find private market options that often provide better coverage at competitive rates. If you're currently with Citizens, it's worth getting a comparison.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How much can I save by bundling home and auto?</button>
+                <div class="faq-a"><div class="faq-a-inner">Bundling home and auto insurance with the same carrier typically saves 15-25% on combined premiums. In Florida's high-rate market, this can translate to hundreds or even thousands of dollars in annual savings. An independent agent can identify the best bundle combinations across multiple carriers, which is something captive agents tied to a single company can't do.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is a hurricane deductible and how does it work?</button>
+                <div class="faq-a"><div class="faq-a-inner">A hurricane deductible is separate from your standard deductible and applies only to hurricane-related claims. In Florida, it's typically 2-10% of your home's insured value. For a home insured at $400,000, a 5% hurricane deductible means you'd pay $20,000 out of pocket before coverage kicks in. Understanding this number is critical for financial planning, and an agent can help you choose the right deductible level.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is windstorm insurance and do I need it?</button>
+                <div class="faq-a"><div class="faq-a-inner">Windstorm insurance covers damage caused by hurricanes, tropical storms, and severe wind events. In coastal areas of Palm Beach County, windstorm coverage is essential and often required by mortgage lenders. Some homeowners policies include wind coverage, while others exclude it, requiring a separate policy. An independent agent can review your existing policy and make sure wind damage is covered.</div></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Why are Florida insurance rates so high right now?</button>
+                <div class="faq-a"><div class="faq-a-inner">Florida's insurance rates have increased over 50% since 2020 due to a combination of factors: increased hurricane frequency and severity, litigation abuse driving up insurer costs, reinsurance price spikes, and multiple carrier insolvencies. Legislative reforms in 2022 and 2023 aimed to stabilize the market, but rate relief has been slow. Working with an independent agent who shops dozens of carriers is one of the most effective ways to manage costs.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+    <h2>Ready to See What You Could Save?</h2>
+    <p>Enter your email and we'll reach out with a personalized quote comparison for your Palm Beach County property.</p>
+    <form class="bottom-form" name="email-capture" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="bottomForm">
+        <input type="hidden" name="form-name" value="email-capture">
+        <p style="display:none"><input name="bot-field"></p>
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit" class="btn-primary">Get My Quote</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">Palm Beach <span>Coverage</span></div>
+            <p>Independent property and casualty insurance agency serving Palm Beach County, Florida. We shop dozens of carriers to find coverage that fits your risk and your budget.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Coverage</h4>
+            <a href="#coverage">Homeowners</a>
+            <a href="#coverage">Flood Insurance</a>
+            <a href="#coverage">Windstorm</a>
+            <a href="#coverage">Auto Insurance</a>
+            <a href="#coverage">Commercial</a>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#faq">FAQ</a>
+            <a href="#quote">Get a Quote</a>
+            <a href="#why">Why Choose Us</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; 2025 Palm Beach Coverage. All rights reserved.</span>
+        <span>Palm Beach County, Florida</span>
+    </div>
+</footer>
+
+<script>
+    // FAQ toggle
+    function toggleFaq(btn) {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.setAttribute('aria-expanded', 'false');
+            q.nextElementSibling.style.maxHeight = null;
+        });
+        // Open clicked if was closed
+        if (!expanded) {
+            btn.setAttribute('aria-expanded', 'true');
+            const answer = btn.nextElementSibling;
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+    }
+
+    // Form submission via Netlify
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(data).toString()
+        }).then(() => {
+            form.style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+        }).catch(() => {
+            form.style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+        });
+    });
+
+    document.getElementById('bottomForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(data).toString()
+        }).then(() => {
+            form.innerHTML = '<p style="color:var(--gold);font-size:1.1rem;font-weight:600;">We\'ll be in touch soon.</p>';
+        }).catch(() => {
+            form.innerHTML = '<p style="color:var(--gold);font-size:1.1rem;font-weight:600;">We\'ll be in touch soon.</p>';
+        });
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.querySelector('.nav-links').classList.remove('open');
+            }
+        });
+    });
+</script>
 </body>
 </html>
