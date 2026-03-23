@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} | Palm Beach Coverage</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <meta name="keywords" content="{{KEYWORDS}}">
+    <meta name="author" content="Palm Beach Coverage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://palmbeachcoverage.com/blog/{{SLUG}}/">
+
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="US-FL">
+    <meta name="geo.placename" content="Palm Beach County">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://palmbeachcoverage.com/blog/{{SLUG}}/">
+    <meta property="og:title" content="{{TITLE}} | Palm Beach Coverage">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:site_name" content="Palm Beach Coverage">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="{{DATE}}">
+    <meta property="article:modified_time" content="{{DATE}}">
+    <meta property="article:section" content="{{PILLAR}}">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}} | Palm Beach Coverage">
+    <meta name="twitter:description" content="{{DESCRIPTION}}">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='15' width='100' height='100' fill='%230B2545'/><text x='50' y='68' font-size='52' fill='%23C5A255' text-anchor='middle' font-weight='bold'>PB</text></svg>">
+
+    <style>
+        :root {
+            --navy: #0B2545;
+            --navy-light: #13315C;
+            --gold: #C5A255;
+            --gold-light: #D4B76A;
+            --coral: #E86C52;
+            --coral-hover: #D45A40;
+            --teal: #2A9D8F;
+            --white: #FFFFFF;
+            --off-white: #F7F9FC;
+            --gray-50: #F0F3F8;
+            --gray-100: #E1E6EF;
+            --gray-200: #C8D0DD;
+            --gray-600: #5A6578;
+            --gray-700: #3D4756;
+            --gray-900: #1A2332;
+            --shadow-sm: 0 1px 3px rgba(11,37,69,0.08);
+            --shadow-md: 0 4px 12px rgba(11,37,69,0.12);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--gray-900);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11,37,69,0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197,162,85,0.15);
+            padding: 0 1.5rem;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-logo span { color: var(--gold); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.active { color: var(--gold); }
+        .nav-cta {
+            background: var(--coral) !important;
+            color: var(--white) !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius);
+            font-weight: 600 !important;
+            transition: background 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--coral-hover) !important; }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ARTICLE */
+        .article-container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 3rem;
+        }
+        .breadcrumb {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+        .breadcrumb a {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .breadcrumb a:hover { color: var(--coral); }
+
+        .article-container h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .pillar-badge {
+            background: var(--navy);
+            color: var(--gold);
+            padding: 0.2rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* ARTICLE CONTENT */
+        .article-content h2 {
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--navy-light);
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .article-content p {
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        .article-content ul, .article-content ol {
+            color: var(--gray-700);
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .article-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        .article-content strong {
+            color: var(--gray-900);
+        }
+        .article-content a {
+            color: var(--coral);
+            text-decoration: none;
+        }
+        .article-content a:hover {
+            text-decoration: underline;
+        }
+        .article-content blockquote {
+            border-left: 3px solid var(--gold);
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--gray-50);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+        .article-content blockquote p {
+            margin-bottom: 0;
+            color: var(--gray-700);
+        }
+        .article-content code {
+            background: var(--gray-50);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 1.5rem 0 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-100);
+        }
+        .article-content table {
+            width: 100%;
+            min-width: 500px;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        .article-content th {
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        .article-content td {
+            padding: 0.65rem 1rem;
+            border-bottom: 1px solid var(--gray-100);
+            color: var(--gray-700);
+        }
+        .article-content tr:hover td {
+            background: var(--gray-50);
+        }
+
+        /* CTA BOX */
+        .article-cta {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .article-cta h3 {
+            color: var(--navy) !important;
+            font-size: 1.4rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0.5rem;
+        }
+        .article-cta p {
+            max-width: 560px;
+            margin: 0 auto 1.25rem;
+            color: var(--gray-600);
+        }
+        .article-cta .cta-btn {
+            display: inline-block;
+            background: var(--coral);
+            color: var(--white);
+            padding: 0.7rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .article-cta .cta-btn:hover {
+            background: var(--coral-hover);
+            transform: translateY(-1px);
+        }
+
+        /* DISCLAIMER */
+        .article-disclaimer {
+            margin-top: 2rem;
+            padding: 1.25rem;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius);
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* RELATED ARTICLES */
+        .related-articles {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-100);
+        }
+        .related-articles h3 {
+            color: var(--navy) !important;
+            margin-top: 0 !important;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .related-articles ul {
+            list-style: none;
+            padding: 0;
+        }
+        .related-articles li {
+            margin-bottom: 0.75rem;
+        }
+        .related-articles a {
+            color: var(--coral);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .related-articles a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 1.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+        }
+        .footer-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--gold); }
+        footer p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                padding: 1rem 1.5rem;
+                gap: 0.75rem;
+                border-bottom: 1px solid rgba(197,162,85,0.15);
+            }
+            .mobile-toggle { display: block; }
+            .article-container { padding: 5rem 1rem 2rem; }
+            .article-container h1 { font-size: 1.6rem; }
+            .article-content h2 { font-size: 1.35rem; }
+            .article-content table { font-size: 0.8rem; }
+            .article-content th, .article-content td { padding: 0.5rem 0.6rem; }
+            .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 0.25rem; text-align: center; }
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{TITLE}}",
+        "description": "{{DESCRIPTION}}",
+        "author": {
+            "@type": "Organization",
+            "name": "Palm Beach Coverage",
+            "url": "https://palmbeachcoverage.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Palm Beach Coverage",
+            "url": "https://palmbeachcoverage.com"
+        },
+        "datePublished": "{{DATE}}",
+        "dateModified": "{{DATE}}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://palmbeachcoverage.com/blog/{{SLUG}}/"
+        },
+        "articleSection": "{{PILLAR}}",
+        "about": {
+            "@type": "Thing",
+            "name": "Property and Casualty Insurance",
+            "description": "Insurance coverage for homeowners, flood, windstorm, auto, and commercial property in Palm Beach County, Florida"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://palmbeachcoverage.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://palmbeachcoverage.com/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "{{TITLE}}",
+                "item": "https://palmbeachcoverage.com/blog/{{SLUG}}/"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">Palm Beach <span>Coverage</span></a>
+        <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="/#guide">Insurance Guide</a></li>
+            <li><a href="/#coverage">Coverage Types</a></li>
+            <li><a href="/blog/" class="active">Blog</a></li>
+            <li><a href="/#notify" class="nav-cta">Get Early Access</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <article class="article-container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; {{TITLE}}
+        </nav>
+
+        <h1>{{TITLE}}</h1>
+
+        <div class="article-meta">
+            <span class="pillar-badge">{{PILLAR}}</span>
+            <span>{{DATE_FORMATTED}}</span>
+            <span>{{READ_TIME}}</span>
+        </div>
+
+        <div class="article-content">
+            {{CONTENT}}
+        </div>
+
+        <div class="article-disclaimer">
+            <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute insurance advice or an offer of coverage. Palm Beach Coverage is an independent insurance agency currently in pre-launch. Insurance products, rates, and availability vary by carrier and are subject to underwriting approval. Always consult with a licensed insurance professional before making coverage decisions.
+        </div>
+
+        <div class="article-cta">
+            <h3>Get Notified When We Launch</h3>
+            <p>Palm Beach Coverage is building an independent P&C insurance agency for Palm Beach County. Join the waitlist for early access.</p>
+            <a href="/#notify" class="cta-btn">Join the Waitlist</a>
+        </div>
+
+        <div class="related-articles">
+            <h3>Related Articles</h3>
+            <ul>{{RELATED_ARTICLES}}
+            </ul>
+        </div>
+    </article>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">Palm Beach <span>Coverage</span></div>
+            <p>Independent property and casualty insurance agency launching in Palm Beach County, Florida. Built to shop multiple carriers and find coverage that fits your property, your risk, and your budget.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Insurance Guides</h4>
+            <a href="/#coverage">Homeowners</a>
+            <a href="/#coverage">Flood Insurance</a>
+            <a href="/#coverage">Windstorm</a>
+            <a href="/#coverage">Auto Insurance</a>
+            <a href="/#coverage">Commercial</a>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="/blog/">Blog</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/#guide">Florida Insurance Guide</a>
+            <a href="/#notify">Early Access</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; 2026 Palm Beach Coverage. All rights reserved.</span>
+        <span>Palm Beach County, Florida</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelector('.mobile-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('open');
+    });
+</script>
+
+</body>
+</html>

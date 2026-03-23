@@ -1,4 +1,5 @@
 [build]
+  command = "npm install && node build-blog.js"
   publish = "."
 
 [[headers]]

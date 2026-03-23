@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida Insurance Blog | Palm Beach Coverage</title>
+    <meta name="description" content="Insurance guides, market analysis, and coverage advice for Palm Beach County property owners. Homeowners, flood, windstorm, auto, and commercial insurance explained. 3 articles.">
+    <meta name="keywords" content="florida insurance blog, palm beach county insurance guide, homeowners insurance tips, flood insurance explained, hurricane insurance florida, property insurance palm beach">
+    <meta name="author" content="Palm Beach Coverage">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://palmbeachcoverage.com/blog/">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-FL">
+    <meta name="geo.placename" content="Palm Beach County">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://palmbeachcoverage.com/blog/">
+    <meta property="og:title" content="Florida Insurance Blog | Palm Beach Coverage">
+    <meta property="og:description" content="Insurance guides, market analysis, and coverage advice for Palm Beach County property owners.">
+    <meta property="og:site_name" content="Palm Beach Coverage">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Florida Insurance Blog | Palm Beach Coverage">
+    <meta name="twitter:description" content="Insurance guides, market analysis, and coverage advice for Palm Beach County property owners.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='15' width='100' height='100' fill='%230B2545'/><text x='50' y='68' font-size='52' fill='%23C5A255' text-anchor='middle' font-weight='bold'>PB</text></svg>">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Palm Beach Coverage Blog",
+        "description": "Insurance guides, market analysis, and coverage advice for Palm Beach County property owners.",
+        "url": "https://palmbeachcoverage.com/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Palm Beach Coverage",
+            "url": "https://palmbeachcoverage.com"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://palmbeachcoverage.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://palmbeachcoverage.com/blog/" }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --navy: #0B2545;
+            --navy-light: #13315C;
+            --gold: #C5A255;
+            --gold-light: #D4B76A;
+            --coral: #E86C52;
+            --coral-hover: #D45A40;
+            --white: #FFFFFF;
+            --off-white: #F7F9FC;
+            --gray-50: #F0F3F8;
+            --gray-100: #E1E6EF;
+            --gray-200: #C8D0DD;
+            --gray-600: #5A6578;
+            --gray-700: #3D4756;
+            --gray-900: #1A2332;
+            --shadow-sm: 0 1px 3px rgba(11,37,69,0.08);
+            --shadow-md: 0 4px 12px rgba(11,37,69,0.12);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--gray-900);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(11,37,69,0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197,162,85,0.15);
+            padding: 0 1.5rem;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .nav-logo span { color: var(--gold); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.active { color: var(--gold); }
+        .nav-cta {
+            background: var(--coral) !important;
+            color: var(--white) !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius);
+            font-weight: 600 !important;
+            transition: background 0.2s !important;
+        }
+        .nav-cta:hover { background: var(--coral-hover) !important; }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .blog-hero {
+            background: linear-gradient(165deg, var(--navy) 0%, var(--navy-light) 60%, #1B4070 100%);
+            color: var(--white);
+            padding: 7rem 1.5rem 3rem;
+            text-align: center;
+        }
+        .blog-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+        .blog-hero h1 span { color: var(--gold); }
+        .blog-hero p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* BLOG GRID */
+        .blog-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            border: 1px solid var(--gray-100);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .blog-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .blog-card-pillar {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--gold);
+            padding: 0.2rem 0.7rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+        .blog-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+            line-height: 1.3;
+        }
+        .blog-card h2 a {
+            color: var(--gray-900);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .blog-card h2 a:hover {
+            color: var(--coral);
+        }
+        .blog-card-meta {
+            color: var(--gray-600);
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        .blog-card-desc {
+            color: var(--gray-700);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .blog-card-link {
+            color: var(--coral);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .blog-card-link:hover {
+            color: var(--coral-hover);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 1.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+        }
+        .footer-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .footer-brand span { color: var(--gold); }
+        footer p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                padding: 1rem 1.5rem;
+                gap: 0.75rem;
+                border-bottom: 1px solid rgba(197,162,85,0.15);
+            }
+            .mobile-toggle { display: block; }
+            .blog-hero { padding: 5.5rem 1rem 2rem; }
+            .blog-hero h1 { font-size: 1.75rem; }
+            .blog-grid { padding: 2rem 1rem; }
+            .blog-card { padding: 1.25rem; }
+            .blog-card h2 { font-size: 1.15rem; }
+            .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 0.25rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">Palm Beach <span>Coverage</span></a>
+        <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="/#guide">Insurance Guide</a></li>
+            <li><a href="/#coverage">Coverage Types</a></li>
+            <li><a href="/blog/" class="active">Blog</a></li>
+            <li><a href="/#notify" class="nav-cta">Get Early Access</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="blog-hero">
+        <h1>Florida Insurance <span>Insights</span></h1>
+        <p>Guides, market analysis, and coverage advice for property owners in Palm Beach County. No jargon, no sales pitch.</p>
+    </section>
+
+    <section class="blog-grid">
+
+        <article class="blog-card">
+            <div class="blog-card-pillar">Florida Market</div>
+            <h2><a href="/blog/florida-homeowners-insurance-crisis-explained/">Florida's Homeowners Insurance Crisis Explained: What Palm Beach County Residents Need to Know</a></h2>
+            <p class="blog-card-meta">March 22, 2026 &middot; 6 min read</p>
+            <p class="blog-card-desc">Florida homeowners insurance premiums have tripled since 2019. Here's why, what the legislature is doing about it, and how to protect yourself in Palm Beach County.</p>
+            <a href="/blog/florida-homeowners-insurance-crisis-explained/" class="blog-card-link">Read article &rarr;</a>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-card-pillar">Flood Insurance</div>
+            <h2><a href="/blog/flood-insurance-palm-beach-county-guide/">Flood Insurance in Palm Beach County: NFIP vs. Private Flood, Zones, and What You Actually Need</a></h2>
+            <p class="blog-card-meta">March 20, 2026 &middot; 7 min read</p>
+            <p class="blog-card-desc">Complete guide to flood insurance in Palm Beach County. NFIP limits, private flood options, flood zone maps, Risk Rating 2.0 pricing, and how to avoid paying too much.</p>
+            <a href="/blog/flood-insurance-palm-beach-county-guide/" class="blog-card-link">Read article &rarr;</a>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-card-pillar">Homeowners Insurance</div>
+            <h2><a href="/blog/hurricane-deductibles-florida-explained/">Hurricane Deductibles in Florida: How They Work and What You'll Actually Pay</a></h2>
+            <p class="blog-card-meta">March 18, 2026 &middot; 6 min read</p>
+            <p class="blog-card-desc">Florida hurricane deductibles are percentage-based, not flat dollar amounts. Here's how they work, what they cost, and how to choose the right one for your home.</p>
+            <a href="/blog/hurricane-deductibles-florida-explained/" class="blog-card-link">Read article &rarr;</a>
+        </article>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-brand">Palm Beach <span>Coverage</span></div>
+            <p>Independent property and casualty insurance agency launching in Palm Beach County, Florida. Built to shop multiple carriers and find coverage that fits your property, your risk, and your budget.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Insurance Guides</h4>
+            <a href="/#coverage">Homeowners</a>
+            <a href="/#coverage">Flood Insurance</a>
+            <a href="/#coverage">Windstorm</a>
+            <a href="/#coverage">Auto Insurance</a>
+            <a href="/#coverage">Commercial</a>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="/blog/">Blog</a>
+            <a href="/#faq">FAQ</a>
+            <a href="/#guide">Florida Insurance Guide</a>
+            <a href="/#notify">Early Access</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; 2026 Palm Beach Coverage. All rights reserved.</span>
+        <span>Palm Beach County, Florida</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelector('.mobile-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('open');
+    });
+</script>
+
+</body>
+</html>
