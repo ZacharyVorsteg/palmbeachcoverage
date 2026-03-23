@@ -75,6 +75,66 @@ function readTime(text) {
   return Math.max(1, Math.ceil(words / 225));
 }
 
+// Extract FAQ Q&A pairs from markdown body
+function extractFAQs(body) {
+  const faqMatch = body.match(/## Frequently Asked Questions\s*\n([\s\S]*?)(?=\n<!--|\n## [^F]|$)/);
+  if (!faqMatch) return [];
+
+  const faqSection = faqMatch[1];
+  const faqs = [];
+  const qBlocks = faqSection.split(/\n?### /).filter(Boolean);
+
+  for (const block of qBlocks) {
+    const lines = block.trim().split('\n');
+    const question = lines[0].replace(/^#+\s*/, '').replace(/\??\s*$/, '?').trim();
+    const answer = lines.slice(1).join(' ').replace(/\n/g, ' ').trim();
+    if (question && answer) {
+      faqs.push({ question, answer });
+    }
+  }
+  return faqs;
+}
+
+// Extract SPEAKABLE text from HTML comment block
+function extractSpeakable(body) {
+  const match = body.match(/<!--[\s\S]*?SPEAKABLE:\s*([\s\S]*?)(?:KEY_TAKEAWAY|-->)/);
+  if (!match) return '';
+  return match[1].trim().replace(/\n/g, ' ');
+}
+
+// Generate FAQPage JSON-LD
+function generateFAQSchema(faqs) {
+  if (!faqs.length) return '';
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  };
+  return `\n    <script type="application/ld+json">\n    ${JSON.stringify(schema, null, 4)}\n    </script>`;
+}
+
+// Generate Speakable JSON-LD
+function generateSpeakableSchema(speakable, slug) {
+  if (!speakable) return '';
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.article-content h2', '.article-content p:first-of-type']
+    },
+    url: `${SITE_URL}/blog/${slug}/`
+  };
+  return `\n    <script type="application/ld+json">\n    ${JSON.stringify(schema, null, 4)}\n    </script>`;
+}
+
 // Generate related articles HTML
 function getRelatedArticles(current, allArticles, count = 3) {
   const samePillar = allArticles.filter(a => a.slug !== current.slug && a.pillar === current.pillar);
@@ -125,6 +185,7 @@ function build() {
       description: meta.description || '',
       keywords: meta.keywords || '',
       date: meta.date || '2026-03-22',
+      modified: meta.modified || meta.date || '2026-03-22',
       pillar: meta.pillar || 'Insurance Guides',
       slug,
       html,
@@ -144,17 +205,24 @@ function build() {
     const relatedHtml = getRelatedArticles(article, articles);
     const minutes = readTime(article.body);
 
+    // Generate extra schemas (FAQPage + Speakable)
+    const faqs = extractFAQs(article.body);
+    const speakable = extractSpeakable(article.body);
+    const extraSchemas = generateFAQSchema(faqs) + generateSpeakableSchema(speakable, article.slug);
+
     const pageHtml = template
       .replace(/\{\{TITLE\}\}/g, article.title)
       .replace(/\{\{DESCRIPTION\}\}/g, article.description)
       .replace(/\{\{KEYWORDS\}\}/g, article.keywords)
       .replace(/\{\{SLUG\}\}/g, article.slug)
       .replace(/\{\{DATE\}\}/g, formatDateISO(article.date))
+      .replace(/\{\{MODIFIED\}\}/g, formatDateISO(article.modified))
       .replace(/\{\{DATE_FORMATTED\}\}/g, formatDate(article.date))
       .replace(/\{\{CONTENT\}\}/g, article.html)
       .replace(/\{\{PILLAR\}\}/g, article.pillar)
       .replace(/\{\{READ_TIME\}\}/g, minutes + ' min read')
-      .replace(/\{\{RELATED_ARTICLES\}\}/g, relatedHtml);
+      .replace(/\{\{RELATED_ARTICLES\}\}/g, relatedHtml)
+      .replace(/\{\{EXTRA_SCHEMAS\}\}/g, extraSchemas);
 
     fs.writeFileSync(path.join(dir, 'index.html'), pageHtml);
     console.log(`  Built: /blog/${article.slug}/`);
@@ -218,7 +286,7 @@ function updateSitemap(articles) {
     blogEntries += `
     <url>
         <loc>${SITE_URL}/blog/${article.slug}/</loc>
-        <lastmod>${article.date}</lastmod>
+        <lastmod>${article.modified || article.date}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>`;
