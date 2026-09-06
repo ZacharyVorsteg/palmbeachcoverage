@@ -10,9 +10,21 @@
     <!-- Blog Articles -->
     <url>
         <loc>https://palmbeachcoverage.com/blog/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-02</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://palmbeachcoverage.com/blog/citizens-insurance-depopulation-takeout-notice-2026/</loc>
+        <lastmod>2026-09-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://palmbeachcoverage.com/blog/why-did-my-home-insurance-go-up-florida-2026/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/citizens-clearinghouse-sb-1028-florida/</loc>

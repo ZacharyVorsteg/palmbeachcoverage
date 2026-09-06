@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florida Insurance Blog | Palm Beach Coverage</title>
-    <meta name="description" content="Insurance guides, market analysis, and coverage advice for Palm Beach County property owners. Homeowners, flood, windstorm, auto, and commercial insurance explained. 8 articles.">
+    <meta name="description" content="Insurance guides and market analysis for Palm Beach County. Homeowners, flood, windstorm, and commercial insurance coverage explained.">
     <meta name="keywords" content="florida insurance blog, palm beach county insurance guide, homeowners insurance tips, flood insurance explained, hurricane insurance florida, property insurance palm beach">
     <meta name="author" content="Palm Beach Coverage">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -19,6 +19,8 @@
     <meta property="og:url" content="https://palmbeachcoverage.com/blog/">
     <meta property="og:title" content="Florida Insurance Blog | Palm Beach Coverage">
     <meta property="og:description" content="Insurance guides, market analysis, and coverage advice for Palm Beach County property owners.">
+    <meta property="og:image" content="https://palmbeachcoverage.com/assets/og-editorial.png">
+    <meta property="og:image:alt" content="Florida Insurance Blog">
     <meta property="og:site_name" content="Palm Beach Coverage">
     <meta property="og:locale" content="en_US">
 
@@ -26,8 +28,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Florida Insurance Blog | Palm Beach Coverage">
     <meta name="twitter:description" content="Insurance guides, market analysis, and coverage advice for Palm Beach County property owners.">
+    <meta name="twitter:image" content="https://palmbeachcoverage.com/assets/og-editorial.png">
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='15' width='100' height='100' fill='%230B2545'/><text x='50' y='68' font-size='52' fill='%23C5A255' text-anchor='middle' font-weight='bold'>PB</text></svg>">
+    <link rel="alternate" type="application/rss+xml" href="/blog/feed.xml">
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -80,6 +84,10 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+        *:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+        *:focus:not(:focus-visible) { outline: none; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: var(--navy); color: var(--white); padding: 8px; text-decoration: none; z-index: 100; }
+        .skip-link:focus { top: 0; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -314,6 +322,7 @@
     </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -336,6 +345,22 @@
     </section>
 
     <section class="blog-grid">
+
+        <article class="blog-card">
+            <div class="blog-card-pillar">State Programs</div>
+            <h2><a href="/blog/citizens-insurance-depopulation-takeout-notice-2026/">Citizens Depopulation 2026: What to Do With Your Florida Takeout Notice</a></h2>
+            <p class="blog-card-meta">September 2, 2026 &middot; 11 min read</p>
+            <p class="blog-card-desc">Received a Citizens depopulation notice? Here's what the takeout offer means, your 30-day opt-out deadline, and how to compare your options before your policy moves.</p>
+            <a href="/blog/citizens-insurance-depopulation-takeout-notice-2026/" class="blog-card-link">Read article &rarr;</a>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-card-pillar">Homeowners Insurance</div>
+            <h2><a href="/blog/why-did-my-home-insurance-go-up-florida-2026/">Why Did My Home Insurance Go Up in Florida? 2026 Premium Guide</a></h2>
+            <p class="blog-card-meta">March 30, 2026 &middot; 16 min read</p>
+            <p class="blog-card-desc">Step-by-step tutorial explaining why your Florida homeowners insurance premium increased in 2026 and exactly what to do about it. Carrier rate data, self-audit checklist, and savings strategies for Palm Beach County.</p>
+            <a href="/blog/why-did-my-home-insurance-go-up-florida-2026/" class="blog-card-link">Read article &rarr;</a>
+        </article>
 
         <article class="blog-card">
             <div class="blog-card-pillar">Florida Market</div>
@@ -428,6 +453,7 @@
     </div>
     <div class="footer-bottom">
         <span>&copy; 2026 Palm Beach Coverage. All rights reserved.</span>
+        <span><a href="/privacy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; <a href="/terms.html" style="color:inherit;text-decoration:underline;">Terms of Use</a></span>
         <span>Palm Beach County, Florida</span>
     </div>
 </footer>

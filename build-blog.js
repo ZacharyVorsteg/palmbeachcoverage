@@ -182,7 +182,9 @@ function build() {
 
   for (const file of files) {
     const raw = fs.readFileSync(path.join(CONTENT_DIR, file), 'utf8');
-    const { meta, body } = parseFrontmatter(raw);
+    let { meta, body } = parseFrontmatter(raw);
+  // strip a leading body H1: the page renders its own <h1> from the title (BLOG-SITE-STANDARD single-h1, 2026-09-05)
+  body = body.replace(/^\s*#\s+[^\n]*\n/, '');
     let html = marked(body);
     // Wrap tables in scrollable container for mobile
     html = html.replace(/<table>/g, '<div class="table-scroll"><table>').replace(/<\/table>/g, '</table></div>');
