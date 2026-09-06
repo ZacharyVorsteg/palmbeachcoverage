@@ -11,6 +11,9 @@
 const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
+const { buildHome } = require('./build-home');
+const { verifyEditorial } = require('./verify-editorial');
+const { stagePublic } = require('./stage-public');
 
 const SITE_URL = 'https://palmbeachcoverage.com';
 const CONTENT_DIR = path.join(__dirname, 'blog-content');
@@ -157,6 +160,8 @@ function getRelatedArticles(current, allArticles, count = 3) {
 
 // Build all blog articles
 function build() {
+  verifyEditorial();
+  buildHome();
   console.log('Building blog...\n');
 
   if (!fs.existsSync(CONTENT_DIR)) {
@@ -229,6 +234,7 @@ function build() {
       .replace(/\{\{DATE\}\}/g, formatDateISO(article.date))
       .replace(/\{\{MODIFIED\}\}/g, formatDateISO(article.modified))
       .replace(/\{\{DATE_FORMATTED\}\}/g, formatDate(article.date))
+      .replace(/\{\{MODIFIED_FORMATTED\}\}/g, formatDate(article.modified))
       .replace(/\{\{CONTENT\}\}/g, article.html)
       .replace(/\{\{PILLAR\}\}/g, article.pillar)
       .replace(/\{\{READ_TIME\}\}/g, minutes + ' min read')
@@ -249,6 +255,7 @@ function build() {
   updateSitemap(articles);
 
   console.log(`\nBlog build complete: ${articles.length} articles`);
+  console.log(`Staged ${stagePublic()} public files`);
 }
 
 // Generate the blog listing page
@@ -275,6 +282,11 @@ function generateIndex(articles) {
   console.log('  Built: /blog/ (index)');
 }
 
+// Use actual editorial modifications when dating feeds and the listing page.
+function latestContentDate(articles) {
+  return articles.map(article => article.modified || article.date).filter(Boolean).sort().at(-1) || '2026-09-06';
+}
+
 // Generate RSS feed
 function generateRSS(articles) {
   let feed = `<?xml version="1.0" encoding="UTF-8"?>
@@ -282,9 +294,9 @@ function generateRSS(articles) {
   <channel>
     <title>Palm Beach Coverage Blog</title>
     <link>${SITE_URL}/blog/</link>
-    <description>Expert analysis on insurance, legal, and regulatory coverage in Palm Beach County.</description>
+    <description>Educational insurance guides and official resources for Palm Beach County.</description>
     <language>en-us</language>
-    <lastBuildDate>${new Date(articles[0]?.date || new Date()).toUTCString()}</lastBuildDate>`;
+    <lastBuildDate>${new Date(latestContentDate(articles) + 'T00:00:00Z').toUTCString()}</lastBuildDate>`;
 
   for (const article of articles) {
     feed += `
@@ -322,7 +334,7 @@ function updateSitemap(articles) {
   blogEntries += `
     <url>
         <loc>${SITE_URL}/blog/</loc>
-        <lastmod>${articles[0]?.date || '2026-03-22'}</lastmod>
+        <lastmod>${latestContentDate(articles)}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>`;

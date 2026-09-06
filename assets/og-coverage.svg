@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Palm Beach Coverage</title>
+  <desc id="desc">Florida insurance education and prelaunch updates for Palm Beach County.</desc>
+  <rect width="1200" height="630" fill="#0B2545"/>
+  <rect x="80" y="80" width="96" height="6" rx="3" fill="#C5A255"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="80" y="226" font-size="76" font-weight="700" fill="#FFFFFF">Palm Beach</text>
+    <text x="80" y="320" font-size="76" font-weight="700" fill="#C5A255">Coverage</text>
+    <text x="80" y="426" font-size="34" fill="#FFFFFF">Florida insurance education</text>
+    <text x="80" y="476" font-size="26" fill="#C8D0DD">Prelaunch updates · Palm Beach County</text>
+    <text x="80" y="555" font-size="22" fill="#C8D0DD">palmbeachcoverage.com</text>
+  </g>
+</svg>

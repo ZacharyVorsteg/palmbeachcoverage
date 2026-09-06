@@ -1,6 +1,6 @@
 [build]
-  command = "npm install && node build-blog.js"
-  publish = "."
+  command = "npm ci && npm run build"
+  publish = "public"
 
 [[headers]]
   for = "/*"

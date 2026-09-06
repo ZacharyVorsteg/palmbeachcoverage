@@ -1,0 +1,78 @@
+{
+  "reviewedAt": "2026-09-06",
+  "policy": "Review factual claims against primary sources and label any fictional example before updating an article hash. This records content reviewed for this release, not professional insurance or legal approval.",
+  "articles": {
+    "citizens-clearinghouse-sb-1028-florida.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "4a6c0b6f13d8b32bdaf31185da80f0b8f0607be8ff78a5018565c056382f0931",
+      "primarySources": [
+        "https://www.flsenate.gov/Session/Bill/2026/1028",
+        "https://www.citizensfla.com/depopulation"
+      ]
+    },
+    "citizens-insurance-depopulation-takeout-notice-2026.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "691d4e73a4f75a4cbb328eee14bee9c361873083c3e915801cd9a707b5956619",
+      "primarySources": [
+        "https://www.citizensfla.com/depoppl"
+      ]
+    },
+    "flood-insurance-palm-beach-county-guide.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "ff992e116f597e1874ed60edae79440097b656cd7cc8559416dc1edf87196c49",
+      "primarySources": [
+        "https://www.floodsmart.gov/get-insured/buy-a-policy"
+      ]
+    },
+    "florida-ai-claims-denial-law-hb-527.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "18107a8f9fe531ebd75ad0d6a30b5e93aa7e18b3efaae0c64080cae92cbeb883",
+      "primarySources": [
+        "https://www.flsenate.gov/Session/Bill/2026/527"
+      ]
+    },
+    "florida-homeowners-insurance-crisis-explained.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "7340d87a75daf9cc416186cd56c13d4ad533b699a5e4558f785958675daffa80",
+      "primarySources": [
+        "https://www.myfloridacfo.com/division/ica/shoppingforinsurance/tips"
+      ]
+    },
+    "florida-roof-age-insurance-law-hb-815.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "4ad6f2c801c2f2284eaf92048543b07d3d3dfde242072f02eb4a97162e611132",
+      "primarySources": [
+        "https://www.flsenate.gov/Session/Bill/2026/815",
+        "https://www.flsenate.gov/laws/statutes/2025/627.7011"
+      ]
+    },
+    "hurricane-deductibles-florida-explained.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "d46101d4be5454a08bb333f3ccfda118b120c2846e198085a6dea0f6ed701e9f",
+      "primarySources": [
+        "https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible"
+      ]
+    },
+    "hurricane-season-insurance-checklist-palm-beach-county.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "816f4975837f4a4afe2ce80e7cafbddca0d51ced60430d5d659e62a276078824",
+      "primarySources": [
+        "https://www.floridadisaster.org/planprepare/"
+      ]
+    },
+    "my-safe-florida-home-program-2026-guide.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "e45b00f9cd46c6040f878d729f660772954b856e80feb7e6acbc2999d7b74fe3",
+      "primarySources": [
+        "https://mysafeflhome.com/"
+      ]
+    },
+    "why-did-my-home-insurance-go-up-florida-2026.md": {
+      "reviewedAt": "2026-09-06",
+      "sha256": "6ebdb91112939f2817e6b09cf0d81e2a0c20156674b4bb311465741165f66c01",
+      "primarySources": [
+        "https://www.myfloridacfo.com/division/ica/shoppingforinsurance/tips"
+      ]
+    }
+  }
+}

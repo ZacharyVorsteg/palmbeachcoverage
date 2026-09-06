@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://palmbeachcoverage.com/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -10,61 +10,67 @@
     <!-- Blog Articles -->
     <url>
         <loc>https://palmbeachcoverage.com/blog/</loc>
-        <lastmod>2026-09-02</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/citizens-insurance-depopulation-takeout-notice-2026/</loc>
-        <lastmod>2026-09-02</lastmod>
+        <lastmod>2026-09-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://palmbeachcoverage.com/blog/why-did-my-home-insurance-go-up-florida-2026/</loc>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/citizens-clearinghouse-sb-1028-florida/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/florida-ai-claims-denial-law-hb-527/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/florida-roof-age-insurance-law-hb-815/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/hurricane-season-insurance-checklist-palm-beach-county/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/my-safe-florida-home-program-2026-guide/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/florida-homeowners-insurance-crisis-explained/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/flood-insurance-palm-beach-county-guide/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://palmbeachcoverage.com/blog/hurricane-deductibles-florida-explained/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

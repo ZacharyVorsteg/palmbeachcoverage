@@ -2,7 +2,9 @@
   "name": "palmbeachcoverage",
   "private": true,
   "scripts": {
-    "build": "node build-blog.js"
+    "build": "node build-blog.js",
+    "test": "node --test tests/*.test.js",
+    "verify:editorial": "node verify-editorial.js"
   },
   "dependencies": {
     "marked": "^15.0.0"

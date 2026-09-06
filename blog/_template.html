@@ -19,19 +19,22 @@
     <meta property="og:url" content="https://palmbeachcoverage.com/blog/{{SLUG}}/">
     <meta property="og:title" content="{{TITLE}} | Palm Beach Coverage">
     <meta property="og:description" content="{{DESCRIPTION}}">
-    <meta property="og:image" content="https://palmbeachcoverage.com/assets/og-editorial.png">
-    <meta property="og:image:alt" content="{{TITLE}}">
     <meta property="og:site_name" content="Palm Beach Coverage">
     <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://palmbeachcoverage.com/assets/og-coverage.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Palm Beach Coverage — Florida insurance education and prelaunch updates.">
     <meta property="article:published_time" content="{{DATE}}">
     <meta property="article:modified_time" content="{{MODIFIED}}">
     <meta property="article:section" content="{{PILLAR}}">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://palmbeachcoverage.com/assets/og-coverage.png">
+    <meta name="twitter:image:alt" content="Palm Beach Coverage — Florida insurance education and prelaunch updates.">
     <meta name="twitter:title" content="{{TITLE}} | Palm Beach Coverage">
     <meta name="twitter:description" content="{{DESCRIPTION}}">
-    <meta name="twitter:image" content="https://palmbeachcoverage.com/assets/og-editorial.png">
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='15' width='100' height='100' fill='%230B2545'/><text x='50' y='68' font-size='52' fill='%23C5A255' text-anchor='middle' font-weight='bold'>PB</text></svg>">
     <link rel="alternate" type="application/rss+xml" href="/blog/feed.xml">
@@ -427,7 +430,7 @@
         "@type": "Article",
         "headline": "{{TITLE}}",
         "description": "{{DESCRIPTION}}",
-        "author": { "@type": "Person", "@id": "https://zacharyvorsteg.com/#person", "name": "Zachary Vorsteg", "url": "https://zacharyvorsteg.com", "worksFor": { "@type": "Organization", "name": "Palm Beach Coverage" } },
+        "author": { "@type": "Organization", "@id": "https://palmbeachcoverage.com/#organization", "name": "Palm Beach Coverage", "url": "https://palmbeachcoverage.com/" },
         "publisher": {
             "@type": "Organization",
             "name": "Palm Beach Coverage",
@@ -475,7 +478,7 @@
     }
     </script>
     {{EXTRA_SCHEMAS}}
-<link rel="author" href="https://zacharyvorsteg.com/">
+
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -494,7 +497,7 @@
     </div>
 </nav>
 
-<main>
+<main id="main">
     <article class="article-container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; {{TITLE}}
@@ -504,7 +507,8 @@
 
         <div class="article-meta">
             <span class="pillar-badge">{{PILLAR}}</span>
-            <time datetime="{{DATE}}">{{DATE_FORMATTED}}</time>
+            <time datetime="{{DATE}}">Published {{DATE_FORMATTED}}</time>
+            <time datetime="{{MODIFIED}}">Updated {{MODIFIED_FORMATTED}}</time>
             <span>{{READ_TIME}}</span>
         </div>
 
@@ -513,12 +517,12 @@
         </div>
 
         <div class="article-disclaimer">
-            <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute insurance advice or an offer of coverage. Palm Beach Coverage is an independent insurance agency currently in pre-launch. Insurance products, rates, and availability vary by carrier and are subject to underwriting approval. Always consult with a licensed insurance professional before making coverage decisions.
+            <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute insurance advice or an offer of coverage. Palm Beach Coverage is an educational publication and prelaunch project. It does not currently quote, sell, bind, or service insurance. Insurance products, rates, and availability vary by carrier and are subject to underwriting approval. Always consult with a licensed insurance professional before making coverage decisions.
         </div>
 
         <div class="article-cta">
             <h3>Get Notified When We Launch</h3>
-            <p>Palm Beach Coverage is building an independent P&C insurance agency for Palm Beach County. Join the waitlist for early access.</p>
+            <p>Palm Beach Coverage is a prelaunch project publishing insurance education. Join the waitlist for project updates; agency services are not currently available.</p>
             <a href="/#notify" class="cta-btn">Join the Waitlist</a>
         </div>
 
@@ -535,7 +539,7 @@
     <div class="footer-inner">
         <div>
             <div class="footer-brand">Palm Beach <span>Coverage</span></div>
-            <p>Independent property and casualty insurance agency launching in Palm Beach County, Florida. Built to shop multiple carriers and find coverage that fits your property, your risk, and your budget.</p>
+            <p>Palm Beach Coverage is an educational publication and prelaunch project for Palm Beach County. Insurance agency services are not currently available.</p>
         </div>
         <div class="footer-col">
             <h4>Insurance Guides</h4>
@@ -555,7 +559,6 @@
     </div>
     <div class="footer-bottom">
         <span>&copy; 2026 Palm Beach Coverage. All rights reserved.</span>
-        <span><a href="/privacy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; <a href="/terms.html" style="color:inherit;text-decoration:underline;">Terms of Use</a></span>
         <span>Palm Beach County, Florida</span>
     </div>
 </footer>
