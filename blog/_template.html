@@ -427,11 +427,7 @@
         "@type": "Article",
         "headline": "{{TITLE}}",
         "description": "{{DESCRIPTION}}",
-        "author": {
-            "@type": "Organization",
-            "name": "Palm Beach Coverage",
-            "url": "https://palmbeachcoverage.com"
-        },
+        "author": { "@type": "Person", "@id": "https://zacharyvorsteg.com/#person", "name": "Zachary Vorsteg", "url": "https://zacharyvorsteg.com", "worksFor": { "@type": "Organization", "name": "Palm Beach Coverage" } },
         "publisher": {
             "@type": "Organization",
             "name": "Palm Beach Coverage",
@@ -479,6 +475,7 @@
     }
     </script>
     {{EXTRA_SCHEMAS}}
+<link rel="author" href="https://zacharyvorsteg.com/">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
