@@ -3,7 +3,7 @@ const path = require('node:path');
 
 function stagePublic(root = __dirname) {
   const output = path.join(root, 'public');
-  const files = ['index.html', 'robots.txt', 'sitemap.xml'];
+  const files = ['index.html', 'robots.txt', 'sitemap.xml', "cef0752662da2ce0eb360708188259db.txt"];
   function collect(dir) {
     for (const entry of fs.readdirSync(path.join(root, dir), {withFileTypes: true})) {
       if (entry.isSymbolicLink()) throw new Error(`Refusing public symlink: ${dir}/${entry.name}`);

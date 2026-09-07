@@ -127,8 +127,8 @@ test('waitlist sends encoded fields and shows success only on accepted HTTP, nev
   }
 });
 
-test('release contains only the 17 public files with identical source bytes', () => {
-  const expected = ['index.html','robots.txt','sitemap.xml','blog/index.html','blog/feed.xml','assets/og-coverage.svg','assets/og-coverage.png', ...fs.readdirSync(path.join(root, 'blog-content')).filter(x=>x.endsWith('.md')).map(x=>`blog/${x.slice(0,-3)}/index.html`)].sort();
+test('release contains only the 18 public files with identical source bytes', () => {
+  const expected = ["cef0752662da2ce0eb360708188259db.txt",'index.html','robots.txt','sitemap.xml','blog/index.html','blog/feed.xml','assets/og-coverage.svg','assets/og-coverage.png', ...fs.readdirSync(path.join(root, 'blog-content')).filter(x=>x.endsWith('.md')).map(x=>`blog/${x.slice(0,-3)}/index.html`)].sort();
   function files(dir, prefix = '') {
     return fs.readdirSync(dir, {withFileTypes: true}).flatMap(entry => entry.isDirectory() ? files(path.join(dir, entry.name), `${prefix}${entry.name}/`) : [`${prefix}${entry.name}`]);
   }
